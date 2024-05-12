@@ -1,0 +1,6 @@
+[
+    { "name": "GOOGLE", "creator": "GOOGLE INC", "url": "https://google.com", "downloadButtonText": "test", "category": "Search Engines" },
+    { "name": "Minecraft", "creator": "MOJANG STUDIO", "url": "https://minecraft.net", "downloadButtonText": "Play", "category": "Games" },
+    { "name": "lunarchun", "creator": "Slohwnix", "url": "https://lunarchun.fr", "downloadButtonText": "discover", "category": "Social Media" },
+    { "name": "Fortnite", "creator": "Epic games", "url": "https://fortnite.com", "downloadButtonText": "Play", "category": "Games" }
+]
