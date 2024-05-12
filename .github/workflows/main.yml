@@ -25,5 +25,5 @@ jobs:
 
     - name: Run Gunicorn
       run: |
-        gunicorn server:app --bind 0.0.0.0:8000  # Remplacez 'server' par le nom de votre fichier principal Flask et 'app' par le nom de votre instance d'application Flask
+        gunicorn main:app 
 
