@@ -1,0 +1,29 @@
+name: Deploy Flask App
+
+on:
+  push:
+    branches:
+      - main  # Mettez le nom de votre branche principale ici
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'  # Remplacez '3.x' par la version de Python que vous utilisez
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt  # Assurez-vous d'avoir un fichier requirements.txt contenant les dépendances de votre application
+
+    - name: Run Gunicorn
+      run: |
+        gunicorn server:app --bind 0.0.0.0:8000  # Remplacez 'server' par le nom de votre fichier principal Flask et 'app' par le nom de votre instance d'application Flask
+
